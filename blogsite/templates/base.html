@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}?v=2">
+
+    <meta charset="UTF-8">
+    <title>{{ title }} — Мой блог</title>
+</head>
+<body>
+
+<div class="container">
+
+    <header class="header">
+        <h1>Мой блог</h1>
+        <p>Добро пожаловать в мой блог!</p>
+    </header>
+
+    <nav class="menu">
+        <a href="{% url 'home' %}">Главная</a>
+        <a href="{% url 'about' %}">О блоге</a>
+        <a href="{% url 'post' %}">Пост</a>
+    </nav>
+
+    <main class="content">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="footer">
+        <p>Мой блог — учебный проект на Django</p>
+    </footer>
+
+</div>
+
+</body>
+</html>
