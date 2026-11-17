@@ -105,6 +105,52 @@ body {
 }
 
 
+/* Форма отзывов */
+
+.review-form {
+    margin: 20px 0 30px;
+}
+
+.review-form p {
+    margin-bottom: 15px;
+}
+
+.review-form label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.review-form input,
+.review-form textarea {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+.review-form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+.review-form button {
+    background-color: #365b96;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.review-form button:hover {
+    background-color: #284779;
+}
+
 
 @media (max-width: 700px) {
     .container {

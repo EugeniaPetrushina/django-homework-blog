@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Книга отзывов</h2>
+
+<p>Здесь вы можете оставить свой отзыв о блоге.</p>
+<p>Отзывы публикуются после проверки администратором.</p>
+
+<h3>Оставить отзыв</h3>
+
+
+<form method="post" class="review-form">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <button type="submit">Отправить отзыв</button>
+</form>
+
+
+<h3>Отзывы посетителей</h3>
+
+{% for review in reviews %}
+
+    <article class="post-preview">
+        <h4>{{ review.full_name }}</h4>
+        <p>{{ review.text|linebreaksbr }}</p>
+    </article>
+
+{% empty %}
+
+    <p>Пока нет опубликованных отзывов.</p>
+
+{% endfor %}
+
+{% endblock %}
+
